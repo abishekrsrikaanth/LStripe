@@ -1,0 +1,24 @@
+{
+    "name": "abishekrsrikaanth/stripe",
+    "description": "",
+    "authors": [
+        {
+            "name": "Abishek R Srikaanth",
+            "email": "abishek@technicaliti.me"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "stripe/stripe-php": "v1.13.0"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Abishekrsrikaanth\\Stripe\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
