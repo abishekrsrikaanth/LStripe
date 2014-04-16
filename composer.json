@@ -1,6 +1,8 @@
 {
     "name": "abishekrsrikaanth/stripe",
-    "description": "",
+    "description": "Laravel Package for Stripe Integration",
+    "license": "BSD-3-Clause",
+    "keywords": ["stripe","laravel","laravel-4","payment gateway"],
     "authors": [
         {
             "name": "Abishek R Srikaanth",
@@ -9,13 +11,10 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "4.2.*",
+        "illuminate/support": "4.*",
         "stripe/stripe-php": "v1.13.0"
     },
     "autoload": {
-        "classmap": [
-            "src/migrations"
-        ],
         "psr-0": {
             "Abishekrsrikaanth\\Stripe\\": "src/"
         }
