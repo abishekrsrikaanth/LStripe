@@ -2,7 +2,7 @@
 
 namespace Abishekrsrikaanth\Stripe;
 
-use \Stripe;
+use \Stripe as Stripe_SDK;
 use \Stripe_Customer;
 use Illuminate\Support\Facades\Config;
 
@@ -10,7 +10,7 @@ class Customer
 {
     public function __construct ()
     {
-        Stripe::setApiKey(Config::get("stripe::credentials.secret_key"));
+        Stripe_SDK::setApiKey(Config::get("stripe::credentials.secret_key"));
     }
 
     public function get ($customerId)
@@ -47,7 +47,7 @@ class Customer
         return $customer->delete();
     }
 
-    public function all ($params=array())
+    public function all ($params = array())
     {
         return Stripe_Customer::all($params);
     }

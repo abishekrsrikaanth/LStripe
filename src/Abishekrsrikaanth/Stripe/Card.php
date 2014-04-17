@@ -2,7 +2,7 @@
 
 namespace Abishekrsrikaanth\Stripe;
 
-use \Stripe;
+use \Stripe as Stripe_SDK;
 use \Stripe_Customer;
 use Illuminate\Support\Facades\Config;
 
@@ -12,7 +12,7 @@ class Card
 
     public function __construct ($customerId)
     {
-        Stripe::setApiKey(Config::get("stripe::credentials.secret_key"));
+        Stripe_SDK::setApiKey(Config::get("stripe::credentials.secret_key"));
         $this->_customer = Stripe_Customer::retrieve($customerId);
     }
 
