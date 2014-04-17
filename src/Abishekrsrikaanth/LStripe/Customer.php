@@ -1,8 +1,8 @@
 <?php
 
-namespace Abishekrsrikaanth\Stripe;
+namespace Abishekrsrikaanth\LStripe;
 
-use \Stripe as Stripe_SDK;
+use \Stripe;
 use \Stripe_Customer;
 use Illuminate\Support\Facades\Config;
 
@@ -10,7 +10,7 @@ class Customer
 {
     public function __construct ()
     {
-        Stripe_SDK::setApiKey(Config::get("stripe::credentials.secret_key"));
+        Stripe::setApiKey(Config::get("stripe::credentials.secret_key"));
     }
 
     public function get ($customerId)

@@ -1,9 +1,9 @@
 <?php
 
-namespace Abishekrsrikaanth\Stripe;
+namespace Abishekrsrikaanth\LStripe;
 
 
-class Stripe
+class LStripe
 {
     public function Card ($customerId)
     {

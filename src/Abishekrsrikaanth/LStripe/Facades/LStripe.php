@@ -1,13 +1,13 @@
 <?php
 
-namespace Abishekrsrikaanth\Stripe\Facades;
+namespace Abishekrsrikaanth\LStripe\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Stripe extends Facade
+class LStripe extends Facade
 {
     protected static function getFacadeAccessor ()
     {
-        return "stripe";
+        return "lstripe";
     }
 } 

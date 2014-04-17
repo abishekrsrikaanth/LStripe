@@ -1,4 +1,4 @@
-<?php namespace Abishekrsrikaanth\Stripe;
+<?php namespace Abishekrsrikaanth\LStripe;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -19,7 +19,7 @@ class StripeServiceProvider extends ServiceProvider
      */
     public function boot ()
     {
-        $this->package('abishekrsrikaanth/stripe');
+        $this->package('abishekrsrikaanth/lstripe');
     }
 
     /**
@@ -29,9 +29,9 @@ class StripeServiceProvider extends ServiceProvider
      */
     public function register ()
     {
-        $this->app['stripe'] = $this->app->share(
+        $this->app['lstripe'] = $this->app->share(
             function ($app) {
-                return new Stripe();
+                return new LStripe();
             }
         );
     }
@@ -43,7 +43,7 @@ class StripeServiceProvider extends ServiceProvider
      */
     public function provides ()
     {
-        return array('stripe');
+        return array('lstripe');
     }
 
 }
