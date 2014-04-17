@@ -1,5 +1,5 @@
 {
-    "name": "abishekrsrikaanth/stripe",
+    "name": "abishekrsrikaanth/lstripe",
     "description": "Laravel Package for Stripe Integration",
     "license": "BSD-3-Clause",
     "keywords": ["stripe","laravel","laravel-4","payment gateway"],
