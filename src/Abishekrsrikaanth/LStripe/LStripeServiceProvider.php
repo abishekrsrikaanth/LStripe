@@ -2,7 +2,7 @@
 
 use Illuminate\Support\ServiceProvider;
 
-class StripeServiceProvider extends ServiceProvider
+class LStripeServiceProvider extends ServiceProvider
 {
 
     /**
