@@ -5,9 +5,9 @@ namespace Abishekrsrikaanth\Stripe;
 
 class Stripe
 {
-    public function Card ()
+    public function Card ($customerId)
     {
-        return new Card();
+        return new Card($customerId);
     }
 
     public function Customer ()

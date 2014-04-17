@@ -1,6 +1,6 @@
 <?php
 
-namespace Abishekrsrikaanth\Facades;
+namespace Abishekrsrikaanth\Stripe\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
