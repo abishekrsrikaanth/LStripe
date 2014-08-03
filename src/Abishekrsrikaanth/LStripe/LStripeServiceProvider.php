@@ -17,7 +17,7 @@ class LStripeServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot ()
+    public function boot()
     {
         $this->package('abishekrsrikaanth/lstripe');
     }
@@ -27,7 +27,7 @@ class LStripeServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register ()
+    public function register()
     {
         $this->app['lstripe'] = $this->app->share(
             function ($app) {
@@ -41,7 +41,7 @@ class LStripeServiceProvider extends ServiceProvider
      *
      * @return array
      */
-    public function provides ()
+    public function provides()
     {
         return array('lstripe');
     }
