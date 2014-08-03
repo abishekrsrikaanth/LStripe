@@ -8,22 +8,22 @@ use Illuminate\Support\Facades\Config;
 
 class Customer
 {
-    public function __construct ()
+    public function __construct()
     {
         Stripe::setApiKey(Config::get("stripe::credentials.secret_key"));
     }
 
-    public function get ($customerId)
+    public function get($customerId)
     {
         return Stripe_Customer::retrieve($customerId);
     }
 
-    public function create ($params)
+    public function create($params)
     {
         return Stripe_Customer::create($params);
     }
 
-    public function update ($customerId, $params)
+    public function update($customerId, $params)
     {
         $customer = $this->get($customerId);
         foreach ($params as $param) {
@@ -40,7 +40,7 @@ class Customer
         return $cards->all($params);
     }
 
-    public function delete ($customerId)
+    public function delete($customerId)
     {
         $customer = $this->get($customerId);
 
@@ -51,4 +51,4 @@ class Customer
     {
         return Stripe_Customer::all($params);
     }
-} 
+}
